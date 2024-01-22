@@ -24,8 +24,8 @@ public class FormFiller {
             usernameInput.clear();
             passwordInput.clear();
 
-            usernameInput.sendKeys(user.getUsername());
-            passwordInput.sendKeys(user.getPassword());
+            usernameInput.sendKeys(user.username());
+            passwordInput.sendKeys(user.password());
             submitButton.click();
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Fehler beim Ausfüllen des Formulars", e);

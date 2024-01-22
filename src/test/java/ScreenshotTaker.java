@@ -19,7 +19,7 @@ public class ScreenshotTaker {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File(filename));
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Fehler beim Erstellen des Screenshots", e);
+            LOGGER.log(Level.SEVERE, "Fehler beim Erstellen des Screenshots {}", e.getMessage());
         }
     }
 }

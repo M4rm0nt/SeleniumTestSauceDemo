@@ -36,7 +36,7 @@ public class MainRunner {
 
             for (User user : users) {
                 formFiller.fillForm(user);
-                screenshotTaker.takeScreenshot("screenshot_" + user.getUsername() + ".png");
+                screenshotTaker.takeScreenshot("screenshot_" + user.username() + ".png");
             }
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Ein Fehler ist aufgetreten", e);
